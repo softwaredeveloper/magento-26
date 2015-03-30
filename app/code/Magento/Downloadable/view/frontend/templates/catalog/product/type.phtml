@@ -1,0 +1,23 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+
+/**
+ * Downloadable product type
+ *
+ * @var $this \Magento\Downloadable\Block\Catalog\Product\View\Type
+ */
+?>
+<?php $_product = $this->getProduct() ?>
+
+<?php if ($_product->getIsSalable()): ?>
+    <div class="stock available" title="<?php echo __('Availability') ?>">
+        <span><?php echo __('In stock') ?></span>
+    </div>
+<?php else: ?>
+    <div class="stock unavailable" title="<?php echo __('Availability') ?>">
+        <span><?php echo __('Out of stock') ?></span>
+    </div>
+<?php endif; ?>
+<?php echo $this->getChildHtml() ?>

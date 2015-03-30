@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Event/etc/events.xsd">
+    <event name="sales_order_save_before">
+        <observer name="payment_sales_order_save_before" instance="Magento\Payment\Model\Observer" method="salesOrderBeforeSave" />
+    </event>
+    <event name="sales_order_status_unassign">
+        <observer name="sales_order_status_update" instance="Magento\Payment\Model\Observer" method="updateOrderStatusForPaymentMethods" />
+    </event>
+</config>

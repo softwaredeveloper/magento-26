@@ -1,0 +1,13 @@
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<td data-part="body.row.cell">
+    <span data-bind="'if': 'options' in $data">
+        <span data-bind="text: options[row[index]]"></span>
+    </span>
+    <span data-bind="ifnot: 'options' in $data">
+        <span data-bind="text: row[field.index]"></span>
+    </span>
+</td>

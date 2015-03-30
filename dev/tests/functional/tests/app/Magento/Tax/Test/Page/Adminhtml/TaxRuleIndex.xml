@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<page mca="tax/rule/index" module="Magento_Tax">
+    <blocks>
+        <gridPageActions>
+            <class>Magento\Backend\Test\Block\GridPageActions</class>
+            <locator>.page-main-actions</locator>
+            <strategy>css selector</strategy>
+        </gridPageActions>
+        <taxRuleGrid>
+            <class>Magento\Tax\Test\Block\Adminhtml\Rule\Grid</class>
+            <locator>#taxRuleGrid</locator>
+            <strategy>css selector</strategy>
+        </taxRuleGrid>
+        <messagesBlock>
+            <class>Magento\Core\Test\Block\Messages</class>
+            <locator>#messages</locator>
+            <strategy>css selector</strategy>
+        </messagesBlock>
+    </blocks>
+</page>

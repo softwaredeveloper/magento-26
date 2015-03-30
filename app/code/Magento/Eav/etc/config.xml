@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Core/etc/config.xsd">
+    <default>
+        <general>
+            <validator_data>
+                <input_types>
+                    <text>text</text>
+                    <textarea>textarea</textarea>
+                    <date>date</date>
+                    <boolean>boolean</boolean>
+                    <multiselect>multiselect</multiselect>
+                    <select>select</select>
+                </input_types>
+            </validator_data>
+        </general>
+    </default>
+</config>

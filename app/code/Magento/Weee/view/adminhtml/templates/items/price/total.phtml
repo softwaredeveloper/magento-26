@@ -1,0 +1,12 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+<?php
+/** @var \Magento\Weee\Block\Adminhtml\Items\Price\Renderer $this */
+
+$_item = $this->getItem();
+?>
+
+<?php echo $this->displayPrices($this->getBaseTotalAmount($_item), $this->getTotalAmount($_item)) ?>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<integrations>
+    <integration name="TestIntegration1">
+        <email>test-integration1@example.com</email>
+        <endpoint_url>http://example.com/endpoint1</endpoint_url>
+        <identity_link_url>http://www.example.com/identity1</identity_link_url>
+    </integration>
+    <integration name="TestIntegration2">
+        <email>test-integration2@example.com</email>
+    </integration>
+</integrations>

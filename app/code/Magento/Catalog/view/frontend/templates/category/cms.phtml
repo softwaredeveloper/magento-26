@@ -1,0 +1,17 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+<?php
+/**
+ * Category view template
+ *
+ * @var $this \Magento\Catalog\Block\Category\View
+ */
+?>
+<?php if ($this->isContentMode() || $this->isMixedMode()): ?>
+    <div class="category-cms">
+        <?php echo $this->getCmsBlockHtml(); ?>
+    </div>
+<?php endif; ?>

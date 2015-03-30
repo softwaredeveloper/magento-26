@@ -1,0 +1,53 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+
+/** @var $this \Magento\Catalog\Block\Product\View */
+?>
+<?php $_product = $this->getProduct(); ?>
+<?php $buttonTitle = __('Add to Cart'); ?>
+<?php if ($_product->isSaleable()): ?>
+<div class="box-tocart">
+    <fieldset class="fieldset">
+        <?php if ($this->shouldRenderQuantity()): ?>
+        <div class="field qty">
+            <label class="label" for="qty"><span><?php echo __('Qty') ?></span></label>
+            <div class="control">
+                <input type="number"
+                       name="qty"
+                       id="qty"
+                       maxlength="12"
+                       value="<?php echo $this->getProductDefaultQty() * 1 ?>"
+                       title="<?php echo __('Qty') ?>" class="input-text qty"
+                    <?php if ($_product->getStockItem() && $_product->getStockItem()->getIsQtyDecimal()) : ?>
+                        data-validate="{'required-number':true, 'validate-greater-than-zero':true}"
+                    <?php else: ?>
+                        data-validate="{'required-number':true, digits:true}"
+                    <?php endif; ?> />
+            </div>
+        </div>
+        <?php endif; ?>
+        <div class="actions">
+            <button type="submit"
+                    title="<?php echo $buttonTitle ?>"
+                    class="action primary tocart"
+                    id="product-addtocart-button">
+                <span><?php echo $buttonTitle ?></span>
+            </button>
+            <?php echo $this->getChildHtml('', true) ?>
+        </div>
+    </fieldset>
+</div>
+<?php endif; ?>
+
+<script type="text/javascript">
+require([
+    "jquery",
+    "mage/mage"
+], function($){
+    $('#product_addtocart_form').mage('validation', {
+        radioCheckboxClosest: '.nested'
+    });
+});
+</script>

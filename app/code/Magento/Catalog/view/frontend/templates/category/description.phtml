@@ -1,0 +1,17 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+<?php
+/**
+ * Category view template
+ *
+ * @var $this \Magento\Catalog\Block\Category\View
+ */
+?>
+<?php if ($_description = $this->getCurrentCategory()->getDescription()): ?>
+    <div class="category-description">
+        <?php echo $this->helper('Magento\Catalog\Helper\Output')->categoryAttribute($this->getCurrentCategory(), $_description, 'description') ?>
+    </div>
+<?php endif; ?>

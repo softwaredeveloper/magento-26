@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<page mca="cms/page" module="Magento_Cms">
+    <blocks>
+        <cmsPageBlock>
+            <class>Magento\Cms\Test\Block\Page</class>
+            <locator>.page-main</locator>
+            <strategy>css selector</strategy>
+        </cmsPageBlock>
+    </blocks>
+</page>

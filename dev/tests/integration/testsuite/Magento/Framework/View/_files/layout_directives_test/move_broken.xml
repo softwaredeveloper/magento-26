@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<layout>
+    <container name="container1" label="Container 1"/>
+    <move element="no_name3"/>
+    <block class="Magento\Framework\View\Element\Text" name="no_name3"/>
+</layout>

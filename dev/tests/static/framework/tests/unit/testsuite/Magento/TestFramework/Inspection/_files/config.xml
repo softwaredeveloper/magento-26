@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<config>
+    <words>
+        <word>demon</word>
+        <word>vampire</word>
+    </words>
+    <whitelist>
+        <item>
+            <path>twilight/eclipse.php</path>
+        </item>
+        <item>
+            <word>vampire</word>
+            <path>twilight/newmoon.php</path>
+        </item>
+    </whitelist>
+</config>

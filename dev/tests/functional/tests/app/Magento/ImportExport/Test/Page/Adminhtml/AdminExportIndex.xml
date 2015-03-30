@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<page mca="admin/export/index" module="Magento_ImportExport">
+    <blocks>
+        <filterExport>
+            <class>Magento\ImportExport\Test\Block\Adminhtml\Export\Filter</class>
+            <locator>#export_filter_container</locator>
+            <strategy>css selector</strategy>
+        </filterExport>
+        <exportForm>
+            <class>Magento\ImportExport\Test\Block\Adminhtml\Export\Edit\Form</class>
+            <locator>#base_fieldset</locator>
+            <strategy>css selector</strategy>
+        </exportForm>
+    </blocks>
+</page>

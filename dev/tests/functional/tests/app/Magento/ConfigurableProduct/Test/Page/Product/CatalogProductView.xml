@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<page mca="catalog/product/view">
+    <blocks>
+        <viewBlock>
+            <renders>
+                <configurable>
+                    <class>Magento\ConfigurableProduct\Test\Block\Product\View</class>
+                </configurable>
+            </renders>
+        </viewBlock>
+        <configurableAttributesBlock>
+            <class>Magento\ConfigurableProduct\Test\Block\Product\View\ConfigurableOptions</class>
+            <locator>#product-options-wrapper</locator>
+            <strategy>css selector</strategy>
+        </configurableAttributesBlock>
+    </blocks>
+</page>

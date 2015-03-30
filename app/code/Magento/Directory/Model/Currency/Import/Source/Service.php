@@ -1,0 +1,43 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+namespace Magento\Directory\Model\Currency\Import\Source;
+
+class Service implements \Magento\Framework\Option\ArrayInterface
+{
+    /**
+     * @var \Magento\Directory\Model\Currency\Import\Config
+     */
+    private $_importConfig;
+
+    /**
+     * @var array
+     */
+    private $_options;
+
+    /**
+     * @param \Magento\Directory\Model\Currency\Import\Config $importConfig
+     */
+    public function __construct(\Magento\Directory\Model\Currency\Import\Config $importConfig)
+    {
+        $this->_importConfig = $importConfig;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function toOptionArray()
+    {
+        if ($this->_options === null) {
+            $this->_options = [];
+            foreach ($this->_importConfig->getAvailableServices() as $serviceName) {
+                $this->_options[] = [
+                    'label' => $this->_importConfig->getServiceLabel($serviceName),
+                    'value' => $serviceName,
+                ];
+            }
+        }
+        return $this->_options;
+    }
+}

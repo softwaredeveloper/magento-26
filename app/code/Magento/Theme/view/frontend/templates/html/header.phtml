@@ -1,0 +1,18 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+/**
+ * @var \Magento\Theme\Block\Html\Header $this
+ */
+?>
+<?php switch ($this->getShowPart()):
+    case 'welcome': ?>
+        <li class="greet welcome"><?php echo $this->getWelcome() ?></li>
+    <?php break; ?>
+
+    <?php case 'other': ?>
+        <?php echo $this->getChildHtml(); ?>
+    <?php break; ?>
+
+<?php endswitch; ?>

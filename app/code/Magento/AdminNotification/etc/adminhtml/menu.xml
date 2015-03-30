@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+    <menu>
+        <add id="Magento_AdminNotification::system_adminnotification" title="Notifications" module="Magento_AdminNotification" sortOrder="10" parent="Magento_Backend::system_other_settings" action="adminhtml/notification" resource="Magento_AdminNotification::adminnotification"/>
+    </menu>
+</config>

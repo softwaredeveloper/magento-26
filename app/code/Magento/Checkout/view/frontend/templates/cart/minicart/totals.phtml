@@ -1,0 +1,11 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+
+/** @var $this Magento\Checkout\Block\Cart\Sidebar\Totals */
+?>
+
+<div class="amount">
+    <?php echo $this->helper('Magento\Checkout\Helper\Data')->formatPrice($this->getSubtotal()) ?>
+</div>

@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<page mca="sales/order_create/index">
+    <blocks>
+        <configureProductBlock>
+            <renders>
+                <bundle>
+                    <class>Magento\Bundle\Test\Block\Adminhtml\Product\Composite\Configure</class>
+                </bundle>
+            </renders>
+        </configureProductBlock>
+    </blocks>
+</page>

@@ -1,0 +1,12 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+
+/**
+ * Product description template
+ *
+ * @var $this \Magento\Catalog\Block\Product\View\Description
+ */
+?>
+<?php echo $this->helper('Magento\Catalog\Helper\Output')->productAttribute($this->getProduct(), $this->getProduct()->getDescription(), 'description') ?>

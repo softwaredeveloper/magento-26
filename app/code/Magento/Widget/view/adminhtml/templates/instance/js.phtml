@@ -1,0 +1,25 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+<script type="text/javascript">
+require(["jquery", "prototype"], function(jQuery){
+
+//<![CDATA[
+setSettings = function(urlTemplate, codeElement, themeElement) {
+    if (!jQuery('#edit_form').valid()) {
+        return false;
+    }
+    codeElement = $F(codeElement);
+    themeElement = $F(themeElement);
+
+    setLocation(new Template(urlTemplate, /(^|.|\r|\n)({{(\w+)}})/).evaluate({
+        'code': codeElement,
+        'theme_id': themeElement
+    }));
+}
+//]]>
+
+});
+</script>

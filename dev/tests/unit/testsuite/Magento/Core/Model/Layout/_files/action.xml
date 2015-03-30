@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<action>
+    <translatable translate="true">test</translatable>
+    <string>test</string>
+</action>

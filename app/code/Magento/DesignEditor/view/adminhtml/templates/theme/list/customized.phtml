@@ -1,0 +1,21 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+<?php /** @var $this \Magento\DesignEditor\Block\Adminhtml\Theme\Selector\SelectorList\AbstractSelectorList */?>
+
+<div class="themes-customizations">
+    <?php if ($this->getTabTitle()): ?>
+    <h3><?php echo $this->getTabTitle() ?></h3>
+    <?php endif ?>
+
+    <ul class="themes">
+        <?php $themeItems = $this->getListItems(); ?>
+        <?php if ($themeItems): ?>
+            <?php echo join("\n", $themeItems) ?>
+        <?php else: ?>
+            <li><?php echo __('There are no customized themes.') ?></li>
+        <?php endif; ?>
+    </ul>
+</div>

@@ -1,0 +1,17 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+<form class="form methods-shipping" id="co-shipping-method-form">
+    <div id="checkout-shipping-method-load"></div>
+    <div id="onepage-checkout-shipping-method-additional-load">
+        <?php echo $this->getChildHtml('additional') ?>
+    </div>
+    <div class="actions-toolbar" id="shipping-method-buttons-container">
+        <div class="primary">
+            <button data-role="opc-continue" type="button" class="button action continue primary"><span><?php echo __('Continue') ?></span></button>
+        </div>
+        <div class="secondary"><a class="action back" href="#"><span><?php echo __('Back') ?></span></a></div>
+    </div>
+</form>

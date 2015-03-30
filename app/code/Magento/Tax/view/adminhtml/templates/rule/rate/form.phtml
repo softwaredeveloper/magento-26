@@ -1,0 +1,17 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+/* @var $this \Magento\Tax\Block\Adminhtml\Rate\Form */
+?>
+<div id="<?php echo $this->getNameInLayout() ?>" style="display:none">
+    <?php echo $this->getFormHtml();?>
+    <?php echo $this->getChildHtml('form_after');?>
+</div>
+
+<script type="text/javascript">
+
+
+    var taxRateCollection = <?php echo json_encode($this->getRateCollection());?>;
+
+</script>

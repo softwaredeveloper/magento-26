@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<tabs>
+    <wishlist>
+        <class>\Magento\Wishlist\Test\Block\Adminhtml\Customer\Edit\Tab\Wishlist</class>
+        <selector>#tab_wishlist</selector>
+        <strategy>css selector</strategy>
+    </wishlist>
+</tabs>

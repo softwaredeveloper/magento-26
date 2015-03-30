@@ -1,0 +1,31 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+
+/** @var $this \Magento\ConfigurableProduct\Block\Product\Configurable\AttributeSelector */
+?>
+<script type="text/javascript">
+require(["jquery","mage/mage","mage/backend/suggest"], function($){
+    var options = <?php echo $this->helper('Magento\Core\Helper\Data')->jsonEncode($this->getSuggestWidgetOptions())?>;
+    $('#configurable-attribute-selector')
+        .mage('suggest', options)
+        .on('suggestselect', function (event, ui) {
+            if (ui.item.id) {
+                $('#configurable-attributes-container').trigger('add', ui.item);
+            }
+            $(this).val('');
+            return false;
+        })
+        .on('suggestresponse', function(e, data, renderer) {
+            var items = [];
+            $.each(data, function(index, item) {
+                if (!$('#configurable_attribute_' + item.id ).length) {
+                    items.push(item);
+                }
+            });
+            renderer(items);
+            return false;
+        })
+});
+</script>

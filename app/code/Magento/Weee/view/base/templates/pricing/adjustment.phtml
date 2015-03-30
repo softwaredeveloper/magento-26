@@ -1,0 +1,28 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+
+<?php
+/** @var \Magento\Weee\Pricing\Render\Adjustment $this */
+
+$weeeSeparator = $openBrace = $closeBrace = '';
+$openBrace = '(';
+$closeBrace = ')';
+?>
+<?php if ($this->showInclDescr()): // incl. + weee ?>
+    <?php foreach ($this->getWeeeTaxAttributes() as $weeeTaxAttribute): ?>
+        <span class="weee"
+              data-price-type="weee"
+              data-label="<?php echo $this->renderWeeeTaxAttributeName($weeeTaxAttribute); ?>"><?php echo $this->renderWeeeTaxAttribute($weeeTaxAttribute); ?></span>
+    <?php endforeach; ?>
+<?php elseif ($this->showExclDescrIncl()): // excl. + weee + final ?>
+    <?php foreach ($this->getWeeeTaxAttributes() as $weeeTaxAttribute): ?>
+        <span class="weee"
+              data-price-type="weee"
+              data-label="<?php echo $this->renderWeeeTaxAttributeName($weeeTaxAttribute); ?>"><?php echo $this->renderWeeeTaxAttribute($weeeTaxAttribute); ?></span>
+    <?php endforeach; ?>
+    <span class="price-final_price"
+          data-label="<?php echo __('Final Price'); ?>"><?php echo $this->getFinalAmount(); ?></span>
+<?php endif; ?>

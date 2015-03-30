@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<page mca="customer/index/edit">
+    <blocks>
+        <configureProductBlock>
+            <renders>
+                <configurable>
+                    <class>Magento\ConfigurableProduct\Test\Block\Adminhtml\Product\Composite\Configure</class>
+                </configurable>
+            </renders>
+        </configureProductBlock>
+    </blocks>
+</page>

@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<page mca="catalogsearch/advanced" module="Magento_CatalogSearch">
+    <blocks>
+        <form>
+            <class>Magento\CatalogSearch\Test\Block\Advanced\Form</class>
+            <locator>.form.search.advanced</locator>
+            <strategy>css selector</strategy>
+        </form>
+        <widgetView>
+            <class>Magento\Widget\Test\Block\WidgetView</class>
+            <locator>.widget</locator>
+            <strategy>css selector</strategy>
+        </widgetView>
+    </blocks>
+</page>

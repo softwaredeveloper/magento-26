@@ -1,0 +1,43 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+namespace Magento\Framework\Search\Request;
+
+/**
+ * Query Interface
+ */
+interface QueryInterface
+{
+    /**
+     * #@+ Query Types
+     */
+    const TYPE_MATCH = 'matchQuery';
+
+    const TYPE_BOOL = 'boolQuery';
+
+    const TYPE_FILTER = 'filteredQuery';
+
+    /**#@-*/
+
+    /**
+     * Get Type
+     *
+     * @return string
+     */
+    public function getType();
+
+    /**
+     * Get Name
+     *
+     * @return string
+     */
+    public function getName();
+
+    /**
+     * Get Boost
+     *
+     * @return int|null
+     */
+    public function getBoost();
+}

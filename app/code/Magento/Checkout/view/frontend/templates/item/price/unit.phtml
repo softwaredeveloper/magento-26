@@ -1,0 +1,14 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+
+/** @var $this \Magento\Checkout\Block\Item\Price\Renderer */
+
+$_item = $this->getItem();
+?>
+<span class="price-including-tax" data-label="<?php echo $this->escapeHtml(__('Excl. Tax')); ?>">
+    <span class="cart-price">
+        <?php echo $this->helper('Magento\Checkout\Helper\Data')->formatPrice($_item->getCalculationPrice()) ?>
+    </span>
+</span>

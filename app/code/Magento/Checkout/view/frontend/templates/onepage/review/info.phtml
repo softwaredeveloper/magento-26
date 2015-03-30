@@ -1,0 +1,38 @@
+\<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+
+/** @var $this \Magento\Checkout\Block\Onepage\Review\Info */
+?>
+<?php echo $this->getChildHtml('items_before'); ?>
+<div id="checkout-review-table-wrapper" class="order-review-wrapper table-wrapper">
+    <?php if ($this->helper('Magento\Tax\Helper\Data')->displayCartBothPrices()): $colspan = $rowspan = 2; else: $colspan = $rowspan = 1; endif; ?>
+    <table class="data table table-order-review items" id="checkout-review-table">
+        <caption class="table-caption"><?php echo __('Order Review'); ?></caption>
+        <thead>
+            <tr>
+                <th class="col item" scope="col"><?php echo __('Product Name') ?></th>
+                <th class="col price" scope="col"><?php echo __('Price') ?></th>
+                <th class="col qty" scope="col"><?php echo __('Qty') ?></th>
+                <th class="col subtotal" scope="col"><?php echo __('Subtotal') ?></th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($this->getItems() as $_item): ?>
+            <?php echo $this->getItemHtml($_item)?>
+        <?php endforeach ?>
+        </tbody>
+        <tfoot>
+            <?php echo $this->getChildHtml('totals'); ?>
+        </tfoot>
+    </table>
+</div>
+<?php echo $this->getChildHtml('items_after'); ?>
+<div id="checkout-review-submit" data-mage-init='{"paymentAuthentication":{}}' class="checkout-submit-order">
+    <?php echo $this->getChildHtml('agreements') ?>
+    <div class="actions-toolbar" id="review-buttons-container">
+        <div class="primary"><?php echo $this->getChildHtml('button') ?></div>
+        <div class="secondary"><?php echo __('Forgot an Item?') ?> <a href="<?php echo $this->getUrl('checkout/cart') ?>" class="action edit"><span><?php echo __('Edit Your Cart') ?></span></a></div>
+    </div>
+</div>

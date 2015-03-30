@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<layout>
+    <handle id="test">
+        <block class="Magento\Framework\View\Element\Template" name="block"/>
+        <container name="container" label="Container"/>
+        <reference name="block">
+            <block class="Magento\Framework\View\Element\Template" name="another.block"/>
+        </reference>
+        <reference name="container">
+            <container name="another.container" label="Container"/>
+        </reference>
+    </handle>
+</layout>

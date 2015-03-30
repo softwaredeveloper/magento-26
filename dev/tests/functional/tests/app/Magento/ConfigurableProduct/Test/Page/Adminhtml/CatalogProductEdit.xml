@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<page mca="catalog/product/edit">
+    <blocks>
+        <formPageActions>
+            <renders>
+                <configurable>
+                    <class>Magento\ConfigurableProduct\Test\Block\Adminhtml\Product\FormPageActions</class>
+                </configurable>
+            </renders>
+        </formPageActions>
+        <productForm>
+            <renders>
+                <configurable>
+                    <class>Magento\ConfigurableProduct\Test\Block\Adminhtml\Product\ProductForm</class>
+                </configurable>
+            </renders>
+        </productForm>
+    </blocks>
+</page>

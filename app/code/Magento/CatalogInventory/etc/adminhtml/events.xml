@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../lib/internal/Magento/Framework/Event/etc/events.xsd">
+    <event name="after_reindex_process_cataloginventory_stock">
+        <observer name="cataloginventory" instance="Magento\CatalogInventory\Model\Observer" method="reindexProductsMassAction" />
+    </event>
+</config>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <virtualType name="Magento\Wishlist\Model\Session\Storage" type="Magento\Framework\Session\Storage">
+        <arguments>
+            <argument name="namespace" xsi:type="string">wishlist</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Magento\Wishlist\Model\Session" type="Magento\Framework\Session\Generic">
+        <arguments>
+            <argument name="storage" xsi:type="object">Magento\Wishlist\Model\Session\Storage</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Core\Model\Url\SecurityInfo">
+        <arguments>
+            <argument name="secureUrlList" xsi:type="array">
+                <item name="wishlist" xsi:type="string">/wishlist/</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

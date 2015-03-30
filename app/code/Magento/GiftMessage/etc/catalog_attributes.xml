@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Catalog/etc/catalog_attributes.xsd">
+    <group name="sales_quote_item">
+        <attribute name="gift_message_available"/>
+    </group>
+</config>

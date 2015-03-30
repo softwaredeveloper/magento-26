@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="checkout.onepage.review.info.items.before">
+            <block class="Magento\Centinel\Block\Authentication" name="centinel.frame" template="authentication.phtml">
+                <action method="setAuthenticationStartMode">
+                    <argument name="mode" xsi:type="string">instant</argument>
+                </action>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

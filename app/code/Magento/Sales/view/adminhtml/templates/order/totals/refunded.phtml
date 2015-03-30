@@ -1,0 +1,11 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+<?php if ($this->getCanDisplayTotalRefunded()): ?>
+<tr>
+    <td class="label"><strong><?php echo __('Total Refunded') ?></strong></td>
+    <td class="emph"><?php echo $this->displayPriceAttribute('total_refunded', true) ?></td>
+</tr>
+<?php endif; ?>

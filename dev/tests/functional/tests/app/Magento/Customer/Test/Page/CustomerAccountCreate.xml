@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<page mca="customer/account/create" module="Magento_Customer">
+    <blocks>
+        <registerForm>
+            <class>Magento\Customer\Test\Block\Form\Register</class>
+            <locator>#form-validate</locator>
+            <strategy>css selector</strategy>
+        </registerForm>
+        <messagesBlock>
+            <class>Magento\Core\Test\Block\Messages</class>
+            <locator>.page.messages</locator>
+            <strategy>css selector</strategy>
+        </messagesBlock>
+    </blocks>
+</page>

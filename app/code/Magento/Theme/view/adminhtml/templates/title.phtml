@@ -1,0 +1,18 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+
+/**
+ * @var $this \Magento\Theme\Block\Html\Title
+ */
+$titleId = ($this->getTitleId()) ? ' id="' . $this->getTitleId() . '"' : '';
+$titleClass = ($this->getTitleClass()) ? ' ' . $this->getTitleClass() : '';
+$title = $this->escapeHtml($this->getPageTitle());
+?>
+<div class="page-title<?php echo $titleClass; ?>">
+    <div class="page-title-inner">
+        <h1 class="title"<?php echo $titleId?>><?php echo $title ?></h1>
+        <?php echo $this->getChildHtml(); ?>
+    </div>
+</div>

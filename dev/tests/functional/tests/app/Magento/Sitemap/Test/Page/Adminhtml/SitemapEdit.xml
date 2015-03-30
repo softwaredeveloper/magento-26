@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<page mca="admin/sitemap/edit" module="Magento_Sitemap">
+    <blocks>
+        <formPageActions>
+            <class>Magento\Backend\Test\Block\FormPageActions</class>
+            <locator>.page-main-actions</locator>
+            <strategy>css selector</strategy>
+        </formPageActions>
+    </blocks>
+</page>

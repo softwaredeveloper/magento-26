@@ -1,0 +1,11 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+
+<?php if ($this->getWishlist()->getItemsCount()): ?>
+    <button type="submit" name="do" title="<?php echo __('Update Wish List') ?>" class="action update">
+        <span><?php echo __('Update Wish List') ?></span>
+    </button>
+<?php endif;?>

@@ -1,0 +1,17 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+<?php
+/**
+ * Shopping cart additional info
+ * @var $this \Magento\Framework\View\Element\Template
+ */
+?>
+<?php
+$name = $this->getNameInLayout();
+foreach ($this->getChildNames($name) as $childName) {
+    echo $this->getChildBlock($childName)->setItem($this->getItem())->toHtml();
+}
+?>

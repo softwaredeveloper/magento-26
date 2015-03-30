@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<page mca="admin/user_role/editrole" module="Magento_User">
+    <blocks>
+        <pageActions>
+            <class>Magento\User\Test\Block\Adminhtml\Role\PageActions</class>
+            <locator>.page-main-actions</locator>
+            <strategy>css selector</strategy>
+        </pageActions>
+        <roleFormTabs>
+            <class>Magento\User\Test\Block\Adminhtml\Role\RoleForm</class>
+            <locator>[id="page:main-container"]</locator>
+            <strategy>css selector</strategy>
+        </roleFormTabs>
+        <messagesBlock>
+            <class>Magento\Core\Test\Block\Messages</class>
+            <locator>#messages</locator>
+            <strategy>css selector</strategy>
+        </messagesBlock>
+    </blocks>
+</page>

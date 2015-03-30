@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<mapping strict="0">
+    <fields>
+        <name>
+            <selector>select</selector>
+            <input>select</input>
+        </name>
+        <qty>
+            <selector>//input[@class = "qty"]</selector>
+            <strategy>xpath</strategy>
+        </qty>
+    </fields>
+</mapping>

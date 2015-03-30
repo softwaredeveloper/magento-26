@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<page mca="reports/index/search" module="Magento_Reports">
+    <blocks>
+        <searchGrid>
+            <class>Magento\Reports\Test\Block\Adminhtml\SearchTermsGrid</class>
+            <locator>#searchReportGrid</locator>
+            <strategy>css selector</strategy>
+        </searchGrid>
+    </blocks>
+</page>

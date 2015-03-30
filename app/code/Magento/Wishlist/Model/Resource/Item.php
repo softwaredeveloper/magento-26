@@ -1,0 +1,68 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+
+/**
+ * Wishlist item model resource
+ *
+ * @author      Magento Core Team <core@magentocommerce.com>
+ */
+namespace Magento\Wishlist\Model\Resource;
+
+class Item extends \Magento\Framework\Model\Resource\Db\AbstractDb
+{
+    /**
+     * Initialize connection and define main table
+     *
+     * @return void
+     */
+    protected function _construct()
+    {
+        $this->_init('wishlist_item', 'wishlist_item_id');
+    }
+
+    /**
+     * Load item by wishlist, product and shared stores
+     *
+     * @param \Magento\Wishlist\Model\Item $object
+     * @param int $wishlistId
+     * @param int $productId
+     * @param array $sharedStores
+     * @return $this
+     */
+    public function loadByProductWishlist($object, $wishlistId, $productId, $sharedStores)
+    {
+        $adapter = $this->_getReadAdapter();
+        $storeWhere = $adapter->quoteInto('store_id IN (?)', $sharedStores);
+        $select = $adapter->select()->from(
+            $this->getMainTable()
+        )->where(
+            'wishlist_id=:wishlist_id AND ' . 'product_id=:product_id AND ' . $storeWhere
+        );
+        $bind = ['wishlist_id' => $wishlistId, 'product_id' => $productId];
+        $data = $adapter->fetchRow($select, $bind);
+        if ($data) {
+            $object->setData($data);
+        }
+        $this->_afterLoad($object);
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function save(\Magento\Framework\Model\AbstractModel $object)
+    {
+        $hasDataChanges = $object->hasDataChanges();
+        $object->setIsOptionsSaved(false);
+
+        $result = parent::save($object);
+
+        if ($hasDataChanges && !$object->isOptionsSaved()) {
+            $object->saveItemOptions();
+        }
+        return $result;
+    }
+}

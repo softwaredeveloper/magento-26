@@ -1,0 +1,10 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+
+/** @var \Magento\Tax\Block\Item\Price\Renderer $this */
+$_item = $this->getItem();
+?>
+<?php $_order = $this->getItem()->getOrderItem()->getOrder() ?>
+<?php echo $_order->formatPrice($this->getTotalAmount($_item))?>

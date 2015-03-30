@@ -1,0 +1,26 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+ ?>
+<script type="text/javascript">
+require([
+    "prototype",
+    "Magento_Sales/order/create/form",
+    "Magento_Catalog/catalog/product/composite/configure"
+], function(){
+
+    order.sidebarHide();
+    Event.observe(window, 'load',  function() {
+        if (window.productConfigure) {
+            productConfigure.addListType('product_to_add', {
+                urlFetch: '<?php echo $this->getUrl('sales/order_create/configureProductToAdd') ?>'
+            });
+            productConfigure.addListType('quote_items', {
+                urlFetch: '<?php echo $this->getUrl('sales/order_create/configureQuoteItems') ?>'
+            });
+        }
+    });
+
+});
+</script>

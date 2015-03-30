@@ -1,0 +1,20 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+
+/**
+ * @var $this \Magento\Theme\Block\Html\Title
+ */
+$cssClass = $this->getCssClass() ? ' ' . $this->getCssClass() : '';
+$title = '';
+if (trim($this->getPageTitle())) {
+    $title = '<span class="base" data-ui-id="page-title" ' .  $this->getAddBaseAttribute() . '>' . $this->escapeHtml($this->getPageTitle()) . '</span>';
+}
+?>
+<?php if ($title): ?>
+<div class="page-title<?php echo $cssClass; ?>">
+    <h1 class="title"><?php echo $title ?></h1>
+    <?php echo $this->getChildHtml(); ?>
+</div>
+<?php endif; ?>

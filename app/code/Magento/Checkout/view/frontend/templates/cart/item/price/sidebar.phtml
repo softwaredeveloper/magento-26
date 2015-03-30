@@ -1,0 +1,12 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+
+/** @var $this \Magento\Checkout\Block\Item\Price\Renderer */
+?>
+<?php $_item = $this->getItem() ?>
+<div class="price-container">
+    <span class="price-label"><?php echo __('Price')?></span>
+    <span class="price-wrapper"><?php echo $this->helper('Magento\Checkout\Helper\Data')->formatPrice($_item->getCalculationPrice()) ?></span>
+</div>

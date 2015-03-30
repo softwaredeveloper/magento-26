@@ -1,0 +1,13 @@
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+
+<!-- ko if: wasActivated -->
+    <div data-bind="visible: active">
+        <!-- ko foreach: elems -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+        <!-- /ko -->
+    </div>
+<!-- /ko -->

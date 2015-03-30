@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<mapping strict="0">
+    <fields>
+        <attribute_set_name />
+        <skeleton_set>
+            <input>select</input>
+        </skeleton_set>
+    </fields>
+</mapping>

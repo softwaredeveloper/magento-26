@@ -1,0 +1,9 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+
+<?php /** @var \Magento\Framework\Pricing\Render\Amount $this */ ?>
+
+<?php echo $this->formatCurrency($this->getDisplayValue(), (bool) $this->getIncludeContainer()) ?>

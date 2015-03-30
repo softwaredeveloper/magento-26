@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<mapping strict="1">
+    <wrapper>login</wrapper>
+    <fields>
+        <username>
+            <selector>#username</selector>
+        </username>
+        <password>
+            <selector>#login</selector>
+        </password>
+    </fields>
+</mapping>

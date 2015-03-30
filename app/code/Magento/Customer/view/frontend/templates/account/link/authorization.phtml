@@ -1,0 +1,16 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+
+/** @var $this \Magento\Customer\Block\Account\AuthorizationLink */
+$dataPostParam = '';
+if ($this->isLoggedIn()) {
+    $dataPostParam = sprintf(" data-post='%s'", $this->getPostParams());
+}
+?>
+<li class="authorization-link">
+    <a <?php echo $this->getLinkAttributes(); ?><?php echo $dataPostParam; ?>>
+        <?php echo $this->escapeHtml($this->getLabel()); ?>
+    </a>
+</li>

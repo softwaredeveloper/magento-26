@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<page mca="catalog/product/view">
+    <blocks>
+        <viewBlock>
+            <renders>
+                <downloadable>
+                    <class>Magento\Downloadable\Test\Block\Catalog\Product\View</class>
+                </downloadable>
+            </renders>
+        </viewBlock>
+    </blocks>
+</page>

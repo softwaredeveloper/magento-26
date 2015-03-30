@@ -1,0 +1,18 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+
+<script type="text/javascript">
+require([
+	'Magento_DesignEditor/js/tools-files'
+], function(){
+
+//<![CDATA[
+MediabrowserInstance = new Mediabrowser(<?php echo $this->getFilebrowserSetupObject() ?>);
+MediabrowserInstance.storeId = '<?php echo $this->getStoreId() ?>';
+//]]>
+
+});
+</script>

@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<mapping strict="0">
+    <fields>
+        <qty />
+        <attribute>
+            <selector>//div[@class="product-options"]//label[.="%s"]//following-sibling::*//select</selector>
+            <strategy>xpath</strategy>
+            <input>select</input>
+        </attribute>
+    </fields>
+</mapping>

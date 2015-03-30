@@ -1,0 +1,22 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+
+return array(
+    'application' => array(
+        'url_host' => '127.0.0.1',
+        'url_path' => '/',
+        'installation' => array(
+            'options' => array(
+                'backend_frontname' => 'backend',
+                'admin_username' => 'admin',
+                'admin_password' => 'password1',
+            ),
+        ),
+    ),
+    'scenario' => array(
+        'scenarios' => array()
+    ),
+    'report_dir' => 'report',
+);

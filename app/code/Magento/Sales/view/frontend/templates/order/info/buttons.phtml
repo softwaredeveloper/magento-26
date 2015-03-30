@@ -1,0 +1,19 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+<div class="actions">
+    <?php  $_order = $this->getOrder() ?>
+    <?php if ($this->helper('Magento\Sales\Helper\Reorder')->canReorder($_order)) : ?>
+        <a class="action reorder" href="<?php echo $this->getReorderUrl($_order) ?>">
+            <span><?php echo __('Reorder') ?></span>
+        </a>
+    <?php endif ?>
+    <a class="action print"
+       href="<?php echo $this->getPrintUrl($_order) ?>"
+       onclick="this.target='_blank';">
+        <span><?php echo __('Print Order') ?></span>
+    </a>
+    <?php echo $this->getChildHtml(); ?>
+</div>

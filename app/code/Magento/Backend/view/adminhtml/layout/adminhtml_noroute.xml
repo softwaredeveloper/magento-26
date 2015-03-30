@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Text" name="content.noRoute">
+                <action method="setText">
+                    <argument translate="true" name="text" xsi:type="string"><![CDATA[<h1 class="page-heading">404 Error</h1><p>Page not found.</p>]]></argument>
+                </action>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

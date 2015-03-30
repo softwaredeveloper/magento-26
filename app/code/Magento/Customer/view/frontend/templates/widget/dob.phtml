@@ -1,0 +1,43 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+
+/**
+USAGE:
+
+Simple:
+
+<?php echo $this->getLayout()->createBlock('Magento\Customer\Block\Widget\Dob')
+   ->setDate($this->getCustomer()->getDob())
+   ->toHtml() ?>
+
+For checkout/onepage/billing.phtml:
+
+<?php echo $this->getLayout()->createBlock('Magento\Customer\Block\Widget\Dob')
+   ->setDate($this->getCustomer()->getDob())
+   ->setFieldIdFormat('billing:%s')
+   ->setFieldNameFormat('billing[%s]')
+   ->toHtml() ?>
+
+NOTE: Regarding styles - if we leave it this way, we'll move it to boxes.css
+      Alternatively we could calculate widths automatically using block input parameters.
+*/
+
+/**
+ * @see \Magento\Customer\Block\Widget\Dob
+ */
+?>
+<?php
+$fieldCssClass = 'field date field-' . $this->getHtmlId();
+$fieldCssClass .= $this->isRequired() ? ' required' : '';
+?>
+<div class="<?php echo $fieldCssClass; ?>">
+    <label class="label" for="<?php echo $this->getHtmlId()?>"><span><?php echo $this->getLabel() ?></span></label>
+    <div class="control customer-dob">
+        <?php echo $this->getFieldHtml(); ?>
+        <?php if ($_message = $this->getAdditionalDescription()) : ?>
+            <div class="note"><?php echo $_message; ?></div>
+        <?php endif; ?>
+    </div>
+</div>

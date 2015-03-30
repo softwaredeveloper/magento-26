@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<page mca="wishlist/index/share" module="Magento_Wishlist">
+    <blocks>
+        <sharingInfoForm>
+            <class>Magento\Wishlist\Test\Block\Customer\Sharing</class>
+            <locator>.wishlist.share</locator>
+            <strategy>css selector</strategy>
+        </sharingInfoForm>
+    </blocks>
+</page>

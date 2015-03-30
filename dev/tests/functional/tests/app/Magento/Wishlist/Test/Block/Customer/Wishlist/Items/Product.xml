@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<mapping strict="0">
+    <fields>
+        <qty>
+            <selector>[data-role="qty"]</selector>
+        </qty>
+        <description>
+            <selector>textarea</selector>
+        </description>
+    </fields>
+</mapping>

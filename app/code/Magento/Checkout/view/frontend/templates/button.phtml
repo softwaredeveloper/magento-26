@@ -1,0 +1,11 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+<?php /** @var $this \Magento\Checkout\Block\Onepage\Success */ ?>
+
+<?php if ($this->getCanViewOrder() && $this->getCanPrintOrder()) :?>
+    <?php echo __('<a href="%1" onclick="this.target=\'_blank\'" class="print">Print receipt</a>', $this->getPrintUrl()) ?>
+    <?php echo $this->getChildHtml() ?>
+<?php endif;?>

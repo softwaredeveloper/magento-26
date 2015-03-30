@@ -1,0 +1,14 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+<ul class="dropdown-menu">
+    <?php foreach ($items as $item): ?>
+    <li id="<?php echo $item['id'] ?>" class="item">
+        <a href="<?php echo $item['url'] ?>" class="title"><?php echo $this->escapeHtml($item['name']) ?></a>
+        <div class="type"><?php echo $item['type'] ?></div>
+        <?php echo $this->escapeHtml($item['description']) ?>
+    </li>
+    <?php endforeach ?>
+</ul>

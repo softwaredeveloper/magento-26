@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<testResults version="1.2">
+    <httpSample>
+        <assertionResult>
+            <name>Response Assertion</name>
+            <failure>false</failure>
+            <error>true</error>
+            <errorMessage>fixture error message</errorMessage>
+        </assertionResult>
+    </httpSample>
+</testResults>

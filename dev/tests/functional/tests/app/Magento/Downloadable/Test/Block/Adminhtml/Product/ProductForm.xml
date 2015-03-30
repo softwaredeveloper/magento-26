@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<tabs>
+    <downloadable_information>
+        <class>\Magento\Downloadable\Test\Block\Adminhtml\Catalog\Product\Edit\Tab\Downloadable</class>
+        <selector>#product_info_tabs_downloadable_items</selector>
+        <strategy>css selector</strategy>
+    </downloadable_information>
+</tabs>

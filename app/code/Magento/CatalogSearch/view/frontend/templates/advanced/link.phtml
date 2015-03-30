@@ -1,0 +1,12 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+ /** @var \Magento\CatalogSearch\Helper\Data $helper */
+$helper = $this->helper('Magento\CatalogSearch\Helper\Data');
+?>
+<div class="nested">
+    <a class="action advanced" href="<?php echo $helper->getAdvancedSearchUrl(); ?>">
+        <?php echo __('Advanced Search'); ?>
+    </a>
+</div>

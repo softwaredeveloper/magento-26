@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<page mca="newsletter/subscriber/index" module="Magento_Newsletter">
+    <blocks>
+        <subscriberGrid>
+            <class>Magento\Newsletter\Test\Block\Adminhtml\Subscriber\Grid</class>
+            <locator>#subscriberGrid</locator>
+            <strategy>css selector</strategy>
+        </subscriberGrid>
+    </blocks>
+</page>

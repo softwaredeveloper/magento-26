@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../lib/internal/Magento/Framework/Event/etc/events.xsd">
+    <event name="catalog_entity_attribute_delete_after">
+        <observer name="salesrule" instance="Magento\SalesRule\Model\Observer" method="catalogAttributeDeleteAfter" />
+    </event>
+    <event name="catalog_entity_attribute_save_after">
+        <observer name="salesrule" instance="Magento\SalesRule\Model\Observer" method="catalogAttributeSaveAfter" />
+    </event>
+</config>

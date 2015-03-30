@@ -1,0 +1,16 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+<?php
+/**
+ * @see \Magento\Payment\Block\Info
+ */
+?>
+<dl class="payment-method">
+    <dt class="title"><?php echo $this->escapeHtml($this->getMethod()->getTitle()) ?></dt>
+<?php if ($this->getInstructions()): ?>
+    <dd class="content"><?php echo nl2br($this->getInstructions()) ?></dd>
+<?php endif; ?>
+</dl>

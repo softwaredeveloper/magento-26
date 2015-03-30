@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../lib/internal/Magento/Framework/Event/etc/events.xsd">
+    <event name="payment_form_block_to_html_before">
+        <observer name="centinel" instance="Magento\Centinel\Model\Observer" method="paymentFormBlockToHtmlBefore" shared="false" />
+    </event>
+</config>

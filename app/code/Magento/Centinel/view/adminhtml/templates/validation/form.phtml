@@ -1,0 +1,29 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+
+<div class="centinel">
+    <div class="authentication">
+        <iframe frameborder="0" border="0" id="<?php echo $this->getContainerId() ?>" src="" style="display:none;" width="100%" height="390" title="<?php echo __('Card Verification')?>"></iframe>
+    </div>
+</div>
+
+<div class="actions">
+    <button onclick="cardValidator.validate()" class="action- scalable" type="button">
+        <span><?php echo __('Start/Reset Validation...')?></span>
+    </button>
+</div>
+
+<script type="text/javascript">
+require([
+	"Magento_Centinel/order_create"
+], function(){
+
+	//<![CDATA[
+	cardValidator = new centinelValidator('<?php echo $this->getMethodCode() ?>', '<?php echo $this->getFrameUrl() ?>', '<?php echo $this->getContainerId() ?>');
+	//]]>
+
+});
+</script>

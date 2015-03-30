@@ -1,0 +1,24 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+/**
+ * @var $this \Magento\UrlRewrite\Block\Edit
+ */
+?>
+<?php echo $this->getChildHtml() ?>
+
+<?php if ($this->getChildBlock('form')): ?>
+<script type="text/javascript">
+require([
+    'jquery',
+    'mage/backend/form',
+    'mage/backend/validation'
+], function($){
+
+    $('#edit_form').form()
+        .validation({validationUrl: '<?php echo $this->getValidationUrl() ?>'});
+
+});
+</script>
+<?php endif; ?>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+    <menu>
+        <add id="Magento_Widget::cms_widget_instance" title="Frontend Apps" module="Magento_Widget" sortOrder="50" parent="Magento_Backend::content_elements" action="adminhtml/widget_instance" resource="Magento_Widget::widget_instance"/>
+    </menu>
+</config>

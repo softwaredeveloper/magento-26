@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<page mca="checkout/cart/index" module="Magento_Checkout">
+    <blocks>
+        <cartBlock>
+            <renders>
+                <grouped>
+                    <class>Magento\GroupedProduct\Test\Block\Checkout\Cart</class>
+                </grouped>
+            </renders>
+        </cartBlock>
+    </blocks>
+</page>

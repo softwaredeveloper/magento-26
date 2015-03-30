@@ -1,0 +1,21 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+<div class="page-actions">
+    <?php echo $this->getBackButtonHtml(); ?>
+    <?php echo $this->getResetButtonHtml(); ?>
+    <?php echo $this->getSaveButtonHtml(); ?>
+    <?php echo $this->getDeleteButtonHtml(); ?>
+</div>
+<?php if ($form): ?>
+<?php echo $form->toHtml(); ?>
+<script type="text/javascript">
+require(['jquery', "mage/mage"], function(jQuery){
+
+    jQuery('#<?php echo $form->getForm()->getId() ?>').mage('form').mage('validation');
+
+});
+</script>
+<?php endif; ?>

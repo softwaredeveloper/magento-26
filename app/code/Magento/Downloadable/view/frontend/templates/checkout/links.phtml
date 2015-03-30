@@ -1,0 +1,13 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+<?php if ($links = $this->getLinks()): ?>
+    <dl class="cart item options">
+        <dt><?php echo $this->getLinksTitle() ?></dt>
+        <?php foreach ($links as $link): ?>
+            <dd><?php echo $this->escapeHtml($link->getTitle()) ?></dd>
+        <?php endforeach; ?>
+    </dl>
+<?php endif; ?>

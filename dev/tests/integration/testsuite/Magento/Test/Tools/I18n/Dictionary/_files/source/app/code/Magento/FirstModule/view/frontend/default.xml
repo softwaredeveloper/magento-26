@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding="utf-8" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+
+<layout>
+    <referenceBlock  translate="description, label">
+        <description>Module layout description</description>
+        <label>Module layout label</label>
+        <title translate="true">Module layout title</title>
+    </referenceBlock>
+</layout>

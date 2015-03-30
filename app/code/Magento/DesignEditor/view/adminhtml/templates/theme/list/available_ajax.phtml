@@ -1,0 +1,18 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+<?php /** @var $this \Magento\DesignEditor\Block\Adminhtml\Theme\Selector\SelectorList\Available */ ?>
+<?php echo join("\n", $this->getListItems()) ?>
+
+<script type="text/javascript">
+require([
+	'jquery',
+	'Magento_DesignEditor/js/infinitescroll'
+], function(jQuery){
+
+    jQuery('.infinite_scroll').infinite_scroll({url :'<?php echo $this->getNextPageUrl() ?>'});
+
+});
+</script>

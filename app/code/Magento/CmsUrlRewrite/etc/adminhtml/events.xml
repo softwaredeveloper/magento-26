@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../lib/internal/Magento/Framework/Event/etc/events.xsd">
+    <event name="cms_page_save_after">
+        <observer name="process_url_rewrite_saving" instance="Magento\CmsUrlRewrite\Model\Observer" method="processUrlRewriteSaving" />
+    </event>
+</config>

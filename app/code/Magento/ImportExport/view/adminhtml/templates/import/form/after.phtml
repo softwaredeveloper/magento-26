@@ -1,0 +1,20 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+<div class="entry-edit fieldset" id="import_validation_container" style="display:none;">
+    <div class="entry-edit-head legend">
+        <span class="icon-head head-edit-form fieldset-legend"
+            id="import_validation_container_header"><?php echo __('Validation Results'); ?></span>
+    </div><br>
+    <div id="import_validation_messages" class="fieldset "><!-- --></div>
+</div>
+<script type="text/javascript">
+require(['jquery', 'prototype'], function(jQuery){
+//<![CDATA[
+    varienImport.resetSelectIndex('entity'); // forced resetting entity selector after page refresh
+//]]>
+
+});
+</script>

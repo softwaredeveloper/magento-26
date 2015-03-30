@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<ruleset name="Magento">
+    <description>A custom coding standard.</description>
+</ruleset>

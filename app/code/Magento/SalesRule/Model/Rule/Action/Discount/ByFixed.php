@@ -1,0 +1,41 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+namespace Magento\SalesRule\Model\Rule\Action\Discount;
+
+class ByFixed extends AbstractDiscount
+{
+    /**
+     * @param \Magento\SalesRule\Model\Rule $rule
+     * @param \Magento\Sales\Model\Quote\Item\AbstractItem $item
+     * @param float $qty
+     * @return \Magento\SalesRule\Model\Rule\Action\Discount\Data
+     */
+    public function calculate($rule, $item, $qty)
+    {
+        /** @var \Magento\SalesRule\Model\Rule\Action\Discount\Data $discountData */
+        $discountData = $this->discountFactory->create();
+
+        $quoteAmount = $this->priceCurrency->convert($rule->getDiscountAmount(), $item->getQuote()->getStore());
+        $discountData->setAmount($qty * $quoteAmount);
+        $discountData->setBaseAmount($qty * $rule->getDiscountAmount());
+
+        return $discountData;
+    }
+
+    /**
+     * @param float $qty
+     * @param \Magento\SalesRule\Model\Rule $rule
+     * @return float
+     */
+    public function fixQuantity($qty, $rule)
+    {
+        $step = $rule->getDiscountStep();
+        if ($step) {
+            $qty = floor($qty / $step) * $step;
+        }
+
+        return $qty;
+    }
+}

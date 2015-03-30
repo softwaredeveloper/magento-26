@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<mapping strict="1">
+    <wrapper>login</wrapper>
+    <fields>
+        <email>
+            <selector>[name='login[username]']</selector>
+        </email>
+        <password />
+    </fields>
+</mapping>

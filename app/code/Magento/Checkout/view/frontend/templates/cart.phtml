@@ -1,0 +1,17 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+<?php
+/**
+ * Shopping cart template
+ *
+ * @var $this \Magento\Checkout\Block\Cart
+ */
+
+if ($this->getItemsCount()) {
+    echo $this->getChildHtml('with-items');
+} else {
+    echo $this->getChildHtml('no-items');
+}

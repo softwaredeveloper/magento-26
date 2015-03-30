@@ -1,0 +1,95 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+namespace Magento\Sales\Model\Order\Total\Config;
+
+/**
+ * Configuration class for totals
+ */
+class Base extends \Magento\Sales\Model\Config\Ordered
+{
+    /**
+     * Cache key for collectors
+     *
+     * @var string
+     */
+    protected $_collectorsCacheKey = 'sorted_collectors';
+
+    /**
+     * Total models list
+     *
+     * @var array
+     */
+    protected $_totalModels = [];
+
+    /**
+     * Configuration path where to collect registered totals
+     *
+     * @var string
+     */
+    protected $_configGroup = 'totals';
+
+    /**
+     * @var \Magento\Sales\Model\Order\TotalFactory
+     */
+    protected $_orderTotalFactory;
+
+    /**
+     * @param \Magento\Framework\App\Cache\Type\Config $configCacheType
+     * @param \Magento\Framework\Logger $logger
+     * @param \Magento\Sales\Model\Config $salesConfig
+     * @param \Magento\Sales\Model\Order\TotalFactory $orderTotalFactory
+     * @param mixed $sourceData
+     */
+    public function __construct(
+        \Magento\Framework\App\Cache\Type\Config $configCacheType,
+        \Magento\Framework\Logger $logger,
+        \Magento\Sales\Model\Config $salesConfig,
+        \Magento\Sales\Model\Order\TotalFactory $orderTotalFactory,
+        $sourceData = null
+    ) {
+        parent::__construct($configCacheType, $logger, $salesConfig, $sourceData);
+        $this->_orderTotalFactory = $orderTotalFactory;
+    }
+
+    /**
+     * Init model class by configuration
+     *
+     * @param string $class
+     * @param string $totalCode
+     * @param array $totalConfig
+     * @return \Magento\Sales\Model\Order\Total\AbstractTotal
+     * @throws \Magento\Framework\Model\Exception
+     */
+    protected function _initModelInstance($class, $totalCode, $totalConfig)
+    {
+        $model = $this->_orderTotalFactory->create($class);
+        if (!$model instanceof \Magento\Sales\Model\Order\Total\AbstractTotal) {
+            throw new \Magento\Framework\Model\Exception(
+                __('The total model should be extended from \Magento\Sales\Model\Order\Total\AbstractTotal.')
+            );
+        }
+
+        $model->setCode($totalCode);
+        $model->setTotalConfigNode($totalConfig);
+        $this->_modelsConfig[$totalCode] = $this->_prepareConfigArray($totalCode, $totalConfig);
+        $this->_modelsConfig[$totalCode] = $model->processConfigArray($this->_modelsConfig[$totalCode]);
+        return $model;
+    }
+
+    /**
+     * Retrieve total calculation models
+     *
+     * @return array
+     */
+    public function getTotalModels()
+    {
+        if (empty($this->_totalModels)) {
+            $this->_initModels();
+            $this->_initCollectors();
+            $this->_totalModels = $this->_collectors;
+        }
+        return $this->_totalModels;
+    }
+}

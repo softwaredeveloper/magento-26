@@ -1,0 +1,9 @@
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+
+#configurable-attributes-container .col-name {
+    max-width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,32 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+<?php /** @var $this \Magento\DesignEditor\Block\Adminhtml\Theme\Selector\SelectorList\Available */?>
+
+<div class="infinite_scroll">
+    <ul class="themes" id="available-themes-container"></ul>
+</div>
+
+<script type="text/javascript">
+require([
+    'jquery',
+    'Magento_DesignEditor/js/infinitescroll'
+], function($){
+
+        $( document ).ready(function( ) {
+            <?php if ($this->getTabId()): ?>
+                $('.infinite_scroll').infinite_scroll({
+                    url : '<?php echo $this->getUrl('*/*/loadthemelist') ?>',
+                    loadDataOnCreate : false
+                });
+
+                $('a[name="<?php echo $this->getTabId() ?>"]').on("click", function(event) {
+                    $('.infinite_scroll').infinite_scroll('loadDataIsContainerEmpty');
+                });
+            <?php endif; ?>
+        });
+
+});
+</script>

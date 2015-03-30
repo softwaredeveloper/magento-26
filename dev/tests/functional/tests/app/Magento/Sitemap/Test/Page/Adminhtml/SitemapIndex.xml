@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<page mca="admin/sitemap/index" module="Magento_Sitemap">
+    <blocks>
+        <gridPageActions>
+            <class>Magento\Backend\Test\Block\GridPageActions</class>
+            <locator>.page-main-actions</locator>
+            <strategy>css selector</strategy>
+        </gridPageActions>
+        <sitemapGrid>
+            <class>Magento\Sitemap\Test\Block\Adminhtml\SitemapGrid</class>
+            <locator>#sitemapGrid</locator>
+            <strategy>css selector</strategy>
+        </sitemapGrid>
+        <messagesBlock>
+            <class>Magento\Core\Test\Block\Messages</class>
+            <locator>#messages</locator>
+            <strategy>css selector</strategy>
+        </messagesBlock>
+    </blocks>
+</page>

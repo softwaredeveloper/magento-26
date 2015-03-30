@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<page mca="catalog/product_set/add" module="Magento_Catalog">
+    <blocks>
+        <pageActions>
+            <class>Magento\Catalog\Test\Block\Adminhtml\Product\Attribute\Set\FormPageActions</class>
+            <locator>.page-main-actions</locator>
+            <strategy>css selector</strategy>
+        </pageActions>
+        <attributeSetForm>
+            <class>Magento\Catalog\Test\Block\Adminhtml\Product\Attribute\Set\Main\AttributeSetForm</class>
+            <locator>#set_name</locator>
+            <strategy>css selector</strategy>
+        </attributeSetForm>
+    </blocks>
+</page>

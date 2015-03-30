@@ -1,0 +1,12 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+
+/** @var $this \Magento\Sales\Block\Order\Info\Buttons\Rss */
+?>
+<?php if ($this->isRssAllowed() && $this->getLink()): ?>
+<a href="<?php echo $this->getLink() ?>" class="action rss">
+    <span><?php echo $this->getLabel() ?></span>
+</a>
+<?php endif; ?>

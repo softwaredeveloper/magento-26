@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<page mca="checkout/onepage">
+    <blocks>
+        <giftMessagesBlock>
+            <class>Magento\GiftMessage\Test\Block\Message\Inline</class>
+            <locator>.gift-message</locator>
+            <strategy>css selector</strategy>
+        </giftMessagesBlock>
+    </blocks>
+</page>

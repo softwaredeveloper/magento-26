@@ -1,0 +1,13 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+<?php
+/** @var \Magento\Sales\Block\Adminhtml\Items\Column\DefaultColumn $this */
+
+$_item = $this->getItem();
+?>
+<div class="price-excl-tax">
+<?php echo $this->displayPrices($_item->getBasePrice(), $_item->getPrice()) ?>
+</div>

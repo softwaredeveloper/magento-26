@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<page mca="catalog/product_set/edit" module="Magento_Catalog">
+    <blocks>
+        <pageActions>
+            <class>Magento\Catalog\Test\Block\Adminhtml\Product\Attribute\Set\FormPageActions</class>
+            <locator>.page-main-actions</locator>
+            <strategy>css selector</strategy>
+        </pageActions>
+        <attributeSetEditBlock>
+            <class>Magento\Catalog\Test\Block\Adminhtml\Product\Attribute\Set\Main</class>
+            <locator>.attribute-set</locator>
+            <strategy>css selector</strategy>
+        </attributeSetEditBlock>
+        <attributeSetEditForm>
+            <class>Magento\Catalog\Test\Block\Adminhtml\Product\Attribute\Set\Main\EditForm</class>
+            <locator>#set_name</locator>
+            <strategy>css selector</strategy>
+        </attributeSetEditForm>
+    </blocks>
+</page>

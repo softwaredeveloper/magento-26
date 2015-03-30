@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<mapping strict="1">
+    <fields>
+        <title>
+            <selector>[name$="[title]"]</selector>
+            <strategy>css selector</strategy>
+        </title>
+        <type>
+            <selector>[name$='[type]']</selector>
+            <strategy>css selector</strategy>
+            <input>select</input>
+        </type>
+        <required>
+            <selector>#field-option-req</selector>
+            <strategy>css selector</strategy>
+            <input>checkbox</input>
+        </required>
+    </fields>
+</mapping>

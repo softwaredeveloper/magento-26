@@ -1,0 +1,27 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+<?php
+/** @var \Magento\Tax\Block\Adminhtml\Items\Price\Renderer $this */
+
+$_item = $this->getItem();
+?>
+
+<?php if ($this->displayPriceExclTax() || $this->displayBothPrices()): ?>
+    <?php $_rowTotalWithoutDiscount = $_item->getRowTotal() - $_item->getTotalDiscountAmount(); ?>
+    <?php if ($this->displayBothPrices()): ?>
+        <span class="label"><?php echo __('Excl. Tax'); ?>:</span>
+    <?php endif; ?>
+    <?php echo $this->formatPrice(max(0, $_rowTotalWithoutDiscount)) ?>
+<?php endif; ?>
+
+
+<?php if ($this->displayPriceInclTax() || $this->displayBothPrices()): ?>
+    <?php if ($this->displayBothPrices($this->getStore())): ?>
+        <br /><span class="label"><?php echo __('Incl. Tax'); ?>:</span>
+    <?php endif; ?>
+    <?php $_incl = $_item->getPriceInclTax() * $_item->getQty() - $_item->getTotalDiscountAmount(); ?>
+    <?php echo $this->formatPrice($_incl) ?>
+<?php endif; ?>

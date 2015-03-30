@@ -1,0 +1,11 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+<?php if ($this->getCanDisplayTotalDue()): ?>
+<tr>
+    <td class="label"><big><strong><?php echo __('Total Due') ?></strong></big></td>
+    <td class="emph"><big><?php echo $this->displayPriceAttribute('total_due', true) ?></big></td>
+</tr>
+<?php endif; ?>

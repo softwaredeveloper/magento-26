@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Core/etc/config.xsd">
+    <default>
+        <admin>
+            <emails>
+                <forgot_email_template>admin_emails_forgot_email_template</forgot_email_template>
+                <forgot_email_identity>general</forgot_email_identity>
+                <password_reset_link_expiration_period>1</password_reset_link_expiration_period>
+                <reset_password_template>admin_emails_reset_password_template</reset_password_template>
+            </emails>
+        </admin>
+    </default>
+</config>

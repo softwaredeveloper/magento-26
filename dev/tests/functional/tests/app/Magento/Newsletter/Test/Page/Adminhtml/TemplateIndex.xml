@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<page mca="newsletter/template/index" module="Magento_Newsletter">
+    <blocks>
+        <messagesBlock>
+            <class>Magento\Core\Test\Block\Messages</class>
+            <locator>#messages .messages</locator>
+            <strategy>css selector</strategy>
+        </messagesBlock>
+        <gridPageActions>
+            <class>Magento\Newsletter\Test\Block\Adminhtml\Template\GridPageActions</class>
+            <locator>.page-main-actions</locator>
+            <strategy>css selector</strategy>
+        </gridPageActions>
+        <newsletterTemplateGrid>
+            <class>Magento\Newsletter\Test\Block\Adminhtml\Template\Grid</class>
+            <locator>[id="page:main-container"]</locator>
+            <strategy>css selector</strategy>
+        </newsletterTemplateGrid>
+    </blocks>
+</page>

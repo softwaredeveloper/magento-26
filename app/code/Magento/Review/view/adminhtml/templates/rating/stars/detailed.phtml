@@ -1,0 +1,21 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+<?php if ($this->getRating() && $this->getRating()->getSize()): ?>
+    <div class="ratings-container">
+        <?php foreach ($this->getRating() as $_rating): ?>
+        <?php if ($_rating->getPercent()): ?>
+            <div class="ratings">
+               <?php echo $this->escapeHtml($_rating->getRatingCode()) ?>
+                <div class="rating-box">
+                    <div class="rating" style="width:<?php echo ceil($_rating->getPercent()) ?>%;"></div>
+                </div>
+            </div>
+        <?php endif; ?>
+        <?php endforeach; ?>
+    </div>
+<?php else: ?>
+    <?php echo __("Rating isn't Available") ?>
+<?php endif; ?>

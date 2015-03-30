@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <type name="Magento\Core\Model\Url\SecurityInfo">
+        <arguments>
+            <argument name="secureUrlList" xsi:type="array">
+                <item name="downloadable" xsi:type="string">/downloadable/customer/</item>
+                <item name="downloadable_download" xsi:type="string">/downloadable/download/</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

@@ -1,0 +1,16 @@
+<?php
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+?>
+<!doctype html>
+<html <?php echo $htmlAttributes ?>>
+    <head <?php echo $headAttributes ?>>
+        <?php echo $requireJs ?>
+        <?php echo $headContent ?>
+        <?php echo $headAdditional ?>
+    </head>
+    <body data-container="body" data-mage-init='{"loaderAjax": {}, "loader": { "icon": "<?php echo $loaderIcon; ?>"}}' <?php echo $bodyAttributes ?>>
+        <?php echo $layoutContent ?>
+    </body>
+</html>
