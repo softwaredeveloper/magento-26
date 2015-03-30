@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [![Build Status](https://travis-ci.org/magento/magento2.svg?branch=master)](https://travis-ci.org/magento/magento2)
 <h2>Welcome</h2>
 Welcome to Magento 2 installation! We're glad you chose to install Magento 2, a cutting edge, feature-rich eCommerce solution that gets results.
@@ -57,3 +58,7 @@ After verifying your prerequisites, perform the following tasks in order to prep
 	*	<a href="http://devdocs.magento.com/guides/v1.0/install-gde/install/install-web.html">Install Magento software using the web interface</a>
 	*	<a href="http://devdocs.magento.com/guides/v1.0/install-gde/install/install-cli.html">Install Magento software using the command line</a>
 2.	<a href="http://devdocs.magento.com/guides/v1.0/install-gde/install/verify.html">Verify the installation</a>
+=======
+# magento
+magento2
+>>>>>>> bcf85aa5838b0d11a64e5e05f1ba27340142e222
